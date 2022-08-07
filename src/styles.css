@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background: whitesmoke;
+    color: #2b2839;      
+}
+
+h2 {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid grey;
+}
+
+h3 {
+    font-style: italic;
+}
+
+/* Clases */
+
+.titulo {
+    text-align: center;         
+}
+
+.seccion {
+    margin-bottom: 40px; 
+}
+
+.pie {
+    display: block;
+    text-align: center;
+    border-top: 1px dashed darkgrey;
+    padding: 20px;    
+}
+
+.progress {
+    margin-bottom: 15px;
+}
+
+.banner {
+    background-image: url("https://t3.ftcdn.net/jpg/04/53/92/04/360_F_453920448_yMcff4E8ctdXQQegdaQ7WcXnHM3y3aMM.jpg");
+    background-size: cover;
+    margin-top: 30px;
+    border-radius: 15px;    
+    padding: 20px;    
+    width: 85%;
+}
+
+.logo {
+    background-color: #0d6efd;
+    border-radius: 15px;
+}
+
+.encabezado {
+    padding: 20px;
+}
+.skills {
+    width: 50%;
+}
