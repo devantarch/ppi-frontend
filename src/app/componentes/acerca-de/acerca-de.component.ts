@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PfDataFetchService } from 'src/app/servicios/pf-data-fetch.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
+  miPortfolio:any;
 
-  constructor() { }
+  constructor(private datosPf:PfDataFetchService) { }
 
   ngOnInit(): void {
+    this.datosPf.obtenerDatos().subscribe(data =>{
+      console.log(data);
+    this.miPortfolio=data;
+
+    });
   }
 
 }

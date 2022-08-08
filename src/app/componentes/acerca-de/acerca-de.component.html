@@ -1,14 +1,14 @@
 <div class="container-fluid pt-5 banner">
     <div class="row">
         <h1 class="titulo">
-            Pablo Javier Ilari - Full Stack Developer Jr.
+            {{miPortfolio.name}} - Full Stack Developer Jr.
         </h1>
     </div>
   </div>
   <div class="container pt-5 ">
     <div class="row seccion">
         <div class="col-2">
-            <img src="assets/cv.jpg" class ="img-fluid rounded-circle" alt="Foto de CV">
+            <img [src]="miPortfolio.image" class ="img-fluid rounded-circle" alt="Foto de CV">
         </div>
         <div class="col-10">
             <h2>
@@ -24,3 +24,4 @@
         </div>
              <!-- La primera sección que debe contener es ACERCA DE ... Acá se debe incluir una foto de perfil, nombre y título (Full Stack Developer Jr.. También se debe sumar un resumen de info profesional)-->
     </div>
+</div>
