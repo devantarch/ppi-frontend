@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PfDataFetchService } from 'src/app/servicios/pf-data-fetch.service';
 
 @Component({
   selector: 'app-skills',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  skillsList:any;  
+
+  constructor(private datosPf:PfDataFetchService) { }
 
   ngOnInit(): void {
+    this.datosPf.obtenerDatos().subscribe(data =>{
+      this.skillsList=data.skills;      
+    });
   }
 
 }

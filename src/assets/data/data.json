@@ -1,8 +1,173 @@
 {
     "name": "Pablo  Ilari",
+    "position": "Full Stack Developer Jr.",
+    "backImage": "https://t3.ftcdn.net/jpg/04/53/92/04/360_F_453920448_yMcff4E8ctdXQQegdaQ7WcXnHM3y3aMM.jpg",
     "image": "./assets/cv.jpg",
-    "company": {
-        "name":"Conicet",
+
+    "about": "Líder de proyectos con más de 10 años de experiencia y con formación en ciencias antropológicas. Busco un puesto en el área de desarrollo y testing en el que pueda utilizar mejor mis habilidades y mi pasión. Profesional organizado y motivado, ambicioso y capaz de trabajar independientemente y en equipo.",
+
+    "experiencia": [{
+        "img": "https://3dsur.com.ar/wp-content/uploads/2018/08/utn-logo.jpg",
+        "url": "https://www.frvt.utn.edu.ar",        
+        "cargo": "Jefe de Laboratorio de Innovación",
+        "company":"UTN Regional Venado Tuerto",
+        "inicio": "Marzo 2022",
+        "fin":"Actualidad",
+        "modo": "Tiempo parcial",
+        "tareas":"Desarrollo de proyectos en el uso de nuevas tecnologías, en particular de impresión 3D, robótica y software junto a becarios y en conjunto con equipos de investigación de los diferentes departamentos."
+    },
+    {
+        "img": "https://devantarch.com.ar/wp-content/uploads/2022/05/logo_light.png",
+        "url": "https://devantarch.com.ar/",        
+        "cargo": "Desarrollador Web",
+        "company":"Devantarch",
+        "inicio": "Febrero 2019",
+        "fin":"Actualidad",
+        "modo": "Tiempo parcial",
+        "tareas":"Realizo sitios web utilizando el CMS Wordpress a través de mi emprendimiento personal Devantarch."
+    },
+    {
+        "img": "https://davnar.com/tech/img/logoDavnar_c2.png",
+        "url": "https://davnar.com/",        
+        "cargo": "Coordinador de Proyectos Especiales",
+        "company":"Metrología DAVNAR S.A., Buenos Aires",
+        "inicio": "Marzo 2017",
+        "fin":"Actualidad",
+        "modo": "Full time",
+        "tareas":"Coordinación de desarrollo y administrativo para el producto “Polígono de Tiro Virtual”. Además estoy a cargo de la infraestructura de la empresa alojada en Google Cloud Platform, servidores Linux y bases de datos MySQL."
+    },
+    {
+        "img": "https://scontent.fros6-1.fna.fbcdn.net/v/t39.30808-6/243080348_1943186232525434_12533321979969612_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGpTcAYtrAIxn5Hksewyezgh0_INOVUUFWHT8g05VRQVazsRhu222kFBAPbE0ymxpCibGAwtvpH2arKu5c8xls4&_nc_ohc=3vhGeGTagXQAX9VPgEz&_nc_ht=scontent.fros6-1.fna&oh=00_AT8FN-ImDtK9cv63AmkIVVJmHxJhgGETLY4CfQEZi3dKCg&oe=62FE6325",
+        "url": "http://institutodante.edu.ar/",        
+        "cargo": "Profesor",
+        "company":"Instituto Dante Alighieri, Venado Tuerto",
+        "inicio": "Marzo 2018",
+        "fin":"Actualidad",
+        "modo": "Tiempo parcial",
+        "tareas":"Profesor de nivel terciario en el área de ciencias sociales y periodismo digital."
+    },
+    {
+        "img": "https://utn-proyectos.com.ar/img/utn_logo.png",
+        "url": "https://utn-proyectos.com.ar/",        
+        "cargo": "Líder de proyectos de Digitalización",
+        "company":"UTN-Proyectos, Buenos Aires",
+        "inicio": "Abril 2011",
+        "fin":"Febrero 2017",
+        "modo": "Full time",
+        "tareas":"Planificación, puesta en marcha y supervisión de más de una decena de centros de digitalización de documentos en distintos organismos públicos nacionales. Coordinación del desarrollo de herramientas de software a medida para cada proyecto."
+    },
+    {
+        "img": "https://www.sediex.com.ar/img/logo.png",
+        "url": "https://www.sediex.com.ar",        
+        "cargo": "Representante Técnico",
+        "company":"Sediex S.R.L.",
+        "inicio": "2009",
+        "fin":"2011",
+        "modo": "Full time",
+        "tareas":"A cargo del soporte técnico de scanners de alta y media producción para un gran número de clientes de las esferas públicas y privadas. Dirección del mantenimiento de los scanners que realizaron el procesamiento del CENSO 2010."
+    }],
+
+    
+    "educacion": [{
+        "school":"Ministerio de Producción Argentina, Buenos Aires",
+        "titulo": "Desarrollador Full Stack",
+        "img": "https://www.concordia.gob.ar/sites/all/themes/programar/images/arg-programa.png",
+        "inicio":"Octubre 2021",
+        "fin":"Agosto 2022",
+        "descripcion": "Programa de capacitación Argentina Programa."
+    },
+    {
+        "school":"Gob. de la Ciudad de Buenos Aires, Buenos Aires",
+        "titulo": "Tester QA",
+        "img": "https://agenciadeaprendizaje.bue.edu.ar/wp-content/uploads/2020/11/logos-header.png",
+        "inicio":"Marzo 2022",
+        "fin":"Julio 2022",
+        "descripcion": "Programa de capacitación en Testing / QA enmarco en el plan Codo a Codo del GCBA."
+    },
+    {
+        "school":"Asuntos del Sur, Rosario",
+        "titulo": "Diplomatura en Innovación Democrática",
+        "img": "https://asuntosdelsur.org/wp-content/uploads/2020/05/asm.png",
+        "inicio":"2018",
+        "fin":"2019",
+        "descripcion": "Graduado con un prototipo de proyecto vinculado a la educación utilizando plataformas móviles."
+    },
+    {
+        "school":"UFASTA, Mar del Plata",
+        "titulo": "Licenciatura en Archivística",
+        "img": "https://www.ufastadistancia.ar/web/wp-content/uploads/2020/11/logosvg.svg",
+        "inicio":"2014",
+        "fin":"2019",
+        "descripcion": "Cursada finalizada. Tesis pendiente."
+    },
+    {
+        "school":"Universidad de Buenos Aires, Buenos Aires",
+        "titulo": "Profesor de Ciencias Antropológicas",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Logo_de_la_Universidad_de_Buenos_Aires.jpg/479px-Logo_de_la_Universidad_de_Buenos_Aires.jpg",
+        "inicio":"2002",
+        "fin":"2014",
+        "descripcion": "Egresado del Ciclo de Grado. Miembro de equipo de Investigación UBACyT 'Antropología y Medios Audiovisuales'."
+    }],
+
+    "skills":[{
+        "skill":"HTML + CSS + JavaScript",
+        "tipo":"primary",
+        "porcentaje":"40"
+    },
+    {
+        "skill":"Spring boot",
+        "tipo":"primary",
+        "porcentaje":"30"
+    },
+    {
+        "skill":"Angular",
+        "tipo":"primary",
+        "porcentaje":"30"
+    },
+    {
+        "skill":"QA - Testing",
+        "tipo":"primary",
+        "porcentaje":"35"
+    },
+    {
+        "skill":"Project Managment",
+        "tipo":"warning",
+        "porcentaje":"80"
+    },
+    {
+        "skill":"Negociación",
+        "tipo":"warning",
+        "porcentaje":"80"
+    },
+    {
+        "skill":"Inglés",
+        "tipo":"danger",
+        "porcentaje":"100"
+    },
+    {
+        "skill":"Italiano",
+        "tipo":"danger",
+        "porcentaje":"55"
+    }],
+
+    "proyectos":[{
+        "proyecto":"Portfolio web desarrollado en Spring Boot y Angular.",
+        "fecha":"2022",
         "url":"#"
-    }
+    },
+    {
+        "proyecto":"Sitio Web utilizando la plataforma ATOM de Artefactual.",
+        "fecha":"2018",
+        "url":"https://www.archivohistoricovenado.com.ar/"
+    },{
+        "proyecto":"Revista online utilizando Wordpress.",
+        "fecha":"2020",
+        "url":"https://www.revistaaji.com/"
+    },
+    {
+        "proyecto":"Sitio para medio local utilizando Wordpress.",
+        "fecha":"2022",
+        "url":"https://www.revistaojito.com.ar/"
+    }]
+   
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PfDataFetchService } from 'src/app/servicios/pf-data-fetch.service';
 
 @Component({
   selector: 'app-educacion',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducacionComponent implements OnInit {
 
-  constructor() { }
+  educacionList:any;
+  constructor(private datosPf:PfDataFetchService) { }
 
   ngOnInit(): void {
+    this.datosPf.obtenerDatos().subscribe(data =>{
+      this.educacionList=data.educacion;
+    });
   }
 
 }

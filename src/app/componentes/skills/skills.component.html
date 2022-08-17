@@ -1,61 +1,33 @@
 <div class="container pt-5 ">
-
-<div class="row seccion">
-    <div class="col-2">
-    </div>
-    <div class="col-10">
-                
-    <h2>
-        Skills
-    </h2>
-        <div class="row">
-            <div class="col-5">
-                <div>
-                    <p>Frontend HTML + CSS + JavaScript</p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-primary" style="width:40%"></div>
-                    </div>
-
-                    <p>Spring boot</p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-primary" style="width:30%"></div>
-                    </div>
-                    
-                    <p>AngularJS</p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-primary" style="width:30%"></div>
-                    </div>
-                    
-                    <p>QA - Testing</p>
-                    <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-primary" style="width:35%"></div>
-                    </div>
+    <div class="row seccion">
+        <div class="col-12">
+            <h2>
+                Skills
+            </h2>
+            <div class="row">
+                <div class="col-5">
+                    <ul>                        
+                        <li *ngFor ="let skill of skillsList">
+                            <ng-container *ngIf="skill.tipo == 'primary'">
+                                <p>{{skill.skill}}</p>
+                                <p><ngb-progressbar [type]="skill.tipo" [value]="skill.porcentaje" height="8px"></ngb-progressbar>
+                                </p>  
+                            </ng-container>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-5">
-                <p>Project Managment</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-warning" style="width:80%"></div>
-                </div>
-
-                <p>Negociación</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-warning" style="width:80%"></div>
-                </div>
-
-                
-                <p>Inglés</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-danger" style="width:100%"></div>
-                </div>
-
-                <p>Italiano</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped bg-danger" style="width:55%"></div>
+                <div class="col-5">
+                    <ul>
+                        <li *ngFor ="let skill of skillsList">
+                            <ng-container *ngIf="skill.tipo != 'primary'">
+                                <p>{{skill.skill}}</p>
+                                <p><ngb-progressbar [type]="skill.tipo" [value]="skill.porcentaje" height="8px"></ngb-progressbar>
+                                </p>  
+                            </ng-container>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- La cuarta sección es la que se refiere a HARD y SOFT Skills. Los mismos se deben representar de forma atractiva, mostrando habilidades duras y blandas, indicando el grado de dominio. Se deben sumar los idiomas-->
-</div>
 </div>

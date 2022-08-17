@@ -1,65 +1,45 @@
 
 <div class="container pt-5 ">
 <div class="row seccion">
-    <div class="col-2">
-    </div>
-    <div class="col-10">
+    <!-- <div class="col-2">
+    </div> -->
+    <div class="col-12">
         <h2>
             Educación
         </h2>
+        <div class="btn-edit">
+            <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+        </div>
         
+        <div>
+            <ul class="items-list">
+                <li *ngFor="let educacion of educacionList">
+                    <div class="data-container">
+                        
+                    <div class="logo-image-container">
+                        <img
+                            class="logo-image"
+                            [src]="educacion.img"
+                        />
+                    </div>
+
+                    </div>
+                    <div class="list-info">
         <h3> 
-            Desarrollador Full Stack, Ministerio de Producción Argentina, Buenos Aires 
+            {{educacion.titulo}}, {{educacion.school}} 
         </h3>
         <h5>
-            Octubre 2021 - Agosto 2022
+            {{educacion.inicio}} - {{educacion.fin}}
         </h5>
         <p> 
-            Programa de capacitación Argentina Programa. 
+            {{educacion.descripcion}} 
         </p>
-        
-        <h3>
-            Tester QA, Gob. de la Ciudad de Buenos Aires, Buenos Aires
-        </h3>
-        <h5>
-            Marzo 2022 - Julio 2022
-        </h5>
-        <p> 
-            Programa de capacitación en Testing / QA enmarco en el plan Codo a Codo del GCBA 
-        </p>
-
-        <h3>
-            Diplomatura en Innovación Democrática, Asuntos del Sur, Rosario
-        </h3>
-        <h5>
-            2018 - 2019
-        </h5>
-        <p>
-            Graduado con un prototipo de proyecto vinculado a la educación utilizando
-            plataformas móviles.
-        </p>
-        
-        <h3>
-            Licenciatura en Archivística, UFASTA, Mar del Plata
-        </h3>
-        <h5>
-            2014 - 2019
-        </h5>
-        <p>
-            Cursada finalizada. Tesis pendiente.
-        </p>
-
-        <h3>
-            Profesor de Ciencias Antropológicas, Universidad de Buenos Aires, Buenos
-            Aires
-        </h3>
-        <h5>
-            2001 - 2014
-        </h5>
-        <p>
-            Egresado del Ciclo de Grado. Miembro de equipo de Investigación UBACyT "Antropología y Medios Audiovisuales"
-        </p>   
-    <!-- La terecera sección que debe contener es EDUCACIÓN. Acá se debe incluir toa la info sobre formación académica. certificaciones, cursos y todo lo relacionado con el titulo con que se cuenta actualimente. Es importante informar info sobre el Instituto, el gogo, nombre, carrera o titulo y periodo)-->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    
+    <!-- La terecera sección que debe contener es EDUCACIÓN. Acá se debe incluir toa la info sobre formación académica. certificaciones, cursos y todo lo relacionado con el titulo con que se cuenta actualimente. Es importante informar info sobre el Instituto, el logo, nombre, carrera o titulo y periodo)-->
     </div>
 </div>
 </div>
