@@ -12,6 +12,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './componentes/login/login.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -23,12 +26,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     EducacionComponent,
     SkillsComponent,
     ProyectosComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

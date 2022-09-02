@@ -1,43 +1,31 @@
 <div class="container pt-5 ">
-<div class="row seccion" >
-    <!-- <div class="col-2">
-    </div> -->
-    <div class="col-12">
-        <h2>
-            Experiencia
-        </h2>
-        <div class="btn-edit">
-            <a href="#"><i class="fa fa-edit"></i></a>
-        </div>
-        <div>
-            <ul class="items-list">
-                <li *ngFor="let experiencia of experienciaList">
-                    <div class="data-container">
-                        <a [href]="experiencia.url" target="_blank">
-                    <div class="logo-image-container">
-                        <img
-                            class="logo-image"
-                            [src]="experiencia.img"
-                        />
-                    </div>
-
-                        </a>
-                    </div>
-                    <div class="list-info">
-                    <h3>
-                        {{experiencia.cargo}}, {{experiencia.company}}
-                    </h3>
-                    <h5>
-                        {{experiencia.inicio}} - {{experiencia.fin}}
-                    </h5>
-                    <p>
-                        {{experiencia.tareas}}
-                    </p>
-                </div>
-                </li>
-            </ul>    
+    <div class="row seccion" >
+        <div class="col-12">
+            <h2>
+                Experiencia
+            </h2>
+            <div class="btn-edit">
+                <a href="#"><i class="fa fa-edit"></i></a>
+            </div>
+            <div>
+                <ul class="items-list">
+                    <li *ngFor="let experiencia of experienciaList">
+                        <div class="data-container">
+                            <a [href]="experiencia.url" target="_blank">
+                                <div class="logo-image-container">
+                                    <img class="logo-image" [src]="experiencia.img"/>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="list-info">
+                            <h3>{{experiencia.cargo}}, {{experiencia.company}}</h3>
+                            <h5>{{experiencia.inicio}} - {{experiencia.fin}}</h5>
+                            <p>{{experiencia.tareas}}</p>
+                        </div>
+                    </li>
+                </ul>    
             </div>  
-        
+            
         </div>
-</div>
+    </div>
 </div>

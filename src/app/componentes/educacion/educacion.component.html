@@ -1,45 +1,29 @@
 
 <div class="container pt-5 ">
-<div class="row seccion">
-    <!-- <div class="col-2">
-    </div> -->
-    <div class="col-12">
-        <h2>
-            Educación
-        </h2>
-        <div class="btn-edit">
-            <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+    <div class="row seccion">
+        <div class="col-12">
+            <h2>
+                Educación
+            </h2>
+            <div class="btn-edit">
+                <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+            </div>
+            <div>
+                <ul class="items-list">
+                    <li *ngFor="let educacion of educacionList">
+                        <div class="data-container">                        
+                            <div class="logo-image-container">
+                                <img class="logo-image" [src]="educacion.img"/>
+                            </div>
+                        </div>
+                        <div class="list-info">
+                            <h3>{{educacion.titulo}}, {{educacion.school}}</h3>
+                            <h5>{{educacion.inicio}} - {{educacion.fin}}</h5>
+                            <p>{{educacion.descripcion}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        
-        <div>
-            <ul class="items-list">
-                <li *ngFor="let educacion of educacionList">
-                    <div class="data-container">
-                        
-                    <div class="logo-image-container">
-                        <img
-                            class="logo-image"
-                            [src]="educacion.img"
-                        />
-                    </div>
-
-                    </div>
-                    <div class="list-info">
-        <h3> 
-            {{educacion.titulo}}, {{educacion.school}} 
-        </h3>
-        <h5>
-            {{educacion.inicio}} - {{educacion.fin}}
-        </h5>
-        <p> 
-            {{educacion.descripcion}} 
-        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    
-    <!-- La terecera sección que debe contener es EDUCACIÓN. Acá se debe incluir toa la info sobre formación académica. certificaciones, cursos y todo lo relacionado con el titulo con que se cuenta actualimente. Es importante informar info sobre el Instituto, el logo, nombre, carrera o titulo y periodo)-->
     </div>
-</div>
 </div>
