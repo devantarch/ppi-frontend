@@ -1,18 +1,18 @@
 <div class="container-fluid pt-5 banner">
     <div class="row">
         <h1 class="titulo">
-            {{miPortfolio.name}} - {{miPortfolio.position}}
+            {{persona.nombre}} {{persona.apellido}} - {{persona.posicion}}
         </h1>
     </div>
 </div>
 <div class="container pt-5 ">
     <div class="row seccion">
         <div class="col-2">
-            <img [src]="miPortfolio.image" class ="img-fluid rounded-circle" alt="Foto de CV">
+            <img [src]="persona.url_img" class ="img-fluid rounded-circle" alt="Foto de CV">
         </div>
         <div class="col-10">
             <h2>Perfil profesional</h2>
-            <p>{{miPortfolio.about}}</p>
+            <p>{{persona.about}}</p>
         </div>           
     </div>
 </div>
