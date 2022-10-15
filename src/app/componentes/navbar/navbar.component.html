@@ -5,7 +5,7 @@
                 <img src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1659143423/APLogo-20-20.png" alt="Logo de Argentina Programa" height="60px">
             </div>
             <div>
-            <ul class="nav nav-pills justify-content-end">
+            <ul class="nav nav-pills justify-content-start">
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.instagram.com/ilari.pablo/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </li>
@@ -15,14 +15,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://twitter.com/devantarch" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link active" href="/login">Log in</a>
-                </li>                 
+                </li>   -->               
             </ul>
             </div>
             <div>
-                <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESAR</button>
-                <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESIÓN</button>
+                <button type="button" class="btn btn-primary" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+                <button type="button" class="btn btn-outline-primary" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
             </div>
         </nav>
         

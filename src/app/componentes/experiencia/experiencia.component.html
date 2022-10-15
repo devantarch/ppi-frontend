@@ -4,23 +4,49 @@
             <h2>
                 Experiencia
             </h2>
-            <div class="btn-edit">
-                <a href="#"><i class="fa fa-edit"></i></a>
+            <div class="col-lg-2" >
+                <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+                    Nueva Experiencia
+                </button>
+                
             </div>
+
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Experiencia of expe">
+                        <td>{{Experiencia.nombreE}}</td>
+                        <td>{{Experiencia.cargo}}-{{Experiencia.inicio}} a {{Experiencia.fin}}. {{Experiencia.tareas}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editarexp/{{Experiencia.id}}"><i class="bi bi-pencil-square"></i>EDITAR</button>
+                        </td>
+                        <td><i class="bi bi-x-square"></i>BORRAR</td>
+                    </tr>
+                </tbody>
+
+
+
+            </table>
+            
+            /////////////////////////////////////////////////
+
             <div>
                 <ul class="items-list">
-                    <li *ngFor="let experiencia of experienciaList">
+                    <li *ngFor="let Experiencia of expe">
                         <div class="data-container">
-                            <a [href]="experiencia.url" target="_blank">
+                            <a [href]="Experiencia.url" target="_blank">
                                 <div class="logo-image-container">
-                                    <img class="logo-image" [src]="experiencia.img"/>
+                                    <img class="logo-image" [src]="Experiencia.url_img"/>
                                 </div>
                             </a>
                         </div>
                         <div class="list-info">
-                            <h3>{{experiencia.cargo}}, {{experiencia.company}}</h3>
-                            <h5>{{experiencia.inicio}} - {{experiencia.fin}}</h5>
-                            <p>{{experiencia.tareas}}</p>
+                            <h3>{{Experiencia.cargo}}, {{Experiencia.nombreE}}</h3>
+                            <h5>{{Experiencia.inicio}} - {{Experiencia.fin}}</h5>
+                            <p>{{Experiencia.tareas}}</p>
+                        </div>
+                        <div>
+                            <p><i class="bi bi-pencil-square"></i> EDITAR - <i class=""></i> BORRAR </p>
+                            <p></p>
                         </div>
                     </li>
                 </ul>    
