@@ -1,5 +1,48 @@
 
 <div class="container pt-5 ">
+    <div class="row seccion" >
+        <div class="col-12">
+            <h2>
+                Educación
+            </h2>
+        </div>
+        <div>
+            <div class="col-lg-2" >
+                <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+                    Nueva Educación
+                </button>
+        </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <ul class="items-list">
+                <li *ngFor="let Educacion of educacion">
+                    <div class="data-container">
+                        <a [href]="Educacion.url" target="_blank">
+                            <div class="logo-image-container">
+                                <img class="logo-image" [src]="Educacion.url_img"/>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list-info">
+                        <h3>{{Educacion.titulo}}, {{Educacion.nombreE}}</h3>
+                        <h5>{{Educacion.inicio}} - {{Educacion.fin}}</h5>
+                        <p>{{Educacion.descripcion}}</p>
+                    </div>
+                    <div>
+                        <p *ngIf="isLogged"><button class="btn btn-light" routerLink="/editaredu/{{Educacion.id}}"><i class="bi bi-pencil-square"></i> EDITAR</button> <button class="btn btn-danger" (click)="delete(Educacion.id)"><i class="bi bi-x-square"></i> BORRAR</button></p>
+                    </div>
+                </li>
+            </ul>    
+        </div>  
+    </div>    
+    
+</div>
+
+
+
+<!-- <div class="container pt-5 ">
     <div class="row seccion">
         <div class="col-12">
             <h2>
@@ -26,4 +69,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

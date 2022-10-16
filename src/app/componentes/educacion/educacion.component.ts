@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PfDataFetchService } from 'src/app/servicios/pf-data-fetch.service';
+import { Educacion } from 'src/app/modelos/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-educacion',
@@ -7,14 +9,39 @@ import { PfDataFetchService } from 'src/app/servicios/pf-data-fetch.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
+  educacion: Educacion[] = [];
 
-  educacionList:any;
-  constructor(private datosPf:PfDataFetchService) { }
+  constructor(private educacionS: EducacionService, private tokenService: TokenService) {}
+  isLogged = false;
 
   ngOnInit(): void {
-    this.datosPf.obtenerDatos().subscribe(data =>{
-      this.educacionList=data.educacion;
-    });
+    this.cargarEducacion();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }   
+  };
+
+  cargarEducacion(): void {
+    this.educacionS.lista().subscribe(data => {
+      this.educacion = data;
+    })
   }
 
-}
+  delete(id?:number){
+    if(id !=undefined){
+      this.educacionS.delete(id).subscribe(
+        data => {
+          this.cargarEducacion();
+        }, err => {
+          alert("No se pudo eliminar");
+        }
+      )
+    }
+
+  }
+
+
+  }
+
