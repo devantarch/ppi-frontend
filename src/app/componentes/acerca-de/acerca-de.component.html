@@ -1,4 +1,10 @@
 <div class="container-fluid pt-5 banner">
+    <div>
+        <div class="col-lg-2" >
+            <button type="button" class="btn btn-dark" routerLink="/editaracercade/1" *ngIf="isLogged">
+                Editar Persona
+            </button>
+    </div>
     <div class="row">
         <h1 class="titulo">
             {{persona.nombre}} {{persona.apellido}} - {{persona.posicion}}

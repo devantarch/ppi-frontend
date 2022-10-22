@@ -2,13 +2,14 @@ import { NumberSymbol } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Educacion } from '../modelos/educacion';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'http://localhost:8080/educacion/';
+  URL = environment.URL + 'educacion/';
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Educacion[]>{

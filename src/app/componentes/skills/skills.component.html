@@ -4,12 +4,15 @@
             <h2>
                 Skills
             </h2>
+            <div class="col-lg-2">
+                <button type="button" routerLink="/nuevaskill" class="btn btn-dark" *ngIf="isLogged"> Nueva Skill </button>
+            </div>
             <div class="row">
                 <div class="col-5">
                     <ul>                        
-                        <li *ngFor ="let skill of skillsList">
+                        <li *ngFor ="let skill of skill">
                             <ng-container *ngIf="skill.tipo == 'primary'">
-                                <p>{{skill.skill}}</p>
+                                <p>{{skill.nombre}}</p>
                                 <p><ngb-progressbar [type]="skill.tipo" [value]="skill.porcentaje" height="8px"></ngb-progressbar>
                                 </p>  
                             </ng-container>
@@ -18,12 +21,15 @@
                 </div>
                 <div class="col-5">
                     <ul>
-                        <li *ngFor ="let skill of skillsList">
+                        <li *ngFor ="let skill of skill">
                             <ng-container *ngIf="skill.tipo != 'primary'">
-                                <p>{{skill.skill}}</p>
+                                <p>{{skill.nombre}}</p>
                                 <p><ngb-progressbar [type]="skill.tipo" [value]="skill.porcentaje" height="8px"></ngb-progressbar>
                                 </p>  
                             </ng-container>
+                            <div>
+                                <p *ngIf="isLogged"><button class="btn btn-light" routerLink="/editarskill/{{skill.id}}"><i class="bi bi-pencil-square"></i> EDITAR</button> <button class="btn btn-danger" (click)="delete(skill.id)"><i class="bi bi-x-square"></i> BORRAR</button></p>
+                            </div>
                         </li>
                     </ul>
                 </div>
