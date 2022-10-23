@@ -1,21 +1,47 @@
 import { Component, OnInit } from '@angular/core';
-import { PfDataFetchService } from 'src/app/servicios/pf-data-fetch.service';
+import { Proyecto } from 'src/app/modelos/proyecto';
+import { ProyectoService } from 'src/app/servicios/proyecto.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
-  styleUrls: ['./proyectos.component.css']
+  styleUrls: ['./proyectos.component.css'],
 })
 export class ProyectosComponent implements OnInit {
-  
-  proyectosList:any;
+  proyecto: Proyecto[] = [];
 
-  constructor(private datosPf:PfDataFetchService) { }
+  constructor(
+    private proyectoS: ProyectoService,
+    private tokenService: TokenService
+  ) {}
+  isLogged = false;
 
   ngOnInit(): void {
-    this.datosPf.obtenerDatos().subscribe(data => {
-      this.proyectosList=data.proyectos;
+    this.cargarProyecto();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  cargarProyecto(): void {
+    this.proyectoS.lista().subscribe((data) => {
+      this.proyecto = data;
     });
   }
 
+  delete(id?: number) {
+    if (id != undefined) {
+      this.proyectoS.delete(id).subscribe(
+        (data) => {
+          this.cargarProyecto();
+        },
+        (err) => {
+          alert('No se pudo eliminar');
+        }
+      );
+    }
+  }
 }
